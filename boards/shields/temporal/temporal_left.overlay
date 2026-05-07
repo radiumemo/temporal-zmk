@@ -7,6 +7,7 @@
 #include "temporal.dtsi"
 
 &kscan0 {
+    diode-direction = "row2col";
     col-gpios
         = <&pro_micro 21 GPIO_ACTIVE_HIGH>  // col_extra
         , <&pro_micro 20 GPIO_ACTIVE_HIGH>  // col_pinky
