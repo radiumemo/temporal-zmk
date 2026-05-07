@@ -1,27 +1,10 @@
-/*
- * Copyright (c) 2024 Curtis Bollinger
- *
- * SPDX-License-Identifier: MIT
- */
-
-#include "temporal.dtsi"
-
 &kscan0 {
-    diode-direction = "col2row";
     col-gpios
-        = <&pro_micro 21 GPIO_ACTIVE_HIGH>  // col_extra
-        , <&pro_micro 20 GPIO_ACTIVE_HIGH>  // col_pinky
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>  // col_ring
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>  // col_middle
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>  // col_index
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>  // col_inner
+        = <&gpio0 31 GPIO_ACTIVE_HIGH>  // D21 - col_extra
+        , <&gpio0 29 GPIO_ACTIVE_HIGH>  // D20 - col_pinky
+        , <&gpio0 2  GPIO_ACTIVE_HIGH>  // D19 - col_ring
+        , <&gpio1 15 GPIO_ACTIVE_HIGH>  // D18 - col_middle
+        , <&gpio1 13 GPIO_ACTIVE_HIGH>  // D15 - col_index
+        , <&gpio1 11 GPIO_ACTIVE_HIGH>  // D14 - col_inner
         ;
-};
-
-&left_encoder {
-    status = "okay";
-};
-
-&sensors {
-    sensors = <&left_encoder>;
 };
